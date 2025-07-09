@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - pip install aws-sam-cli
+  build:
+    commands:
+      - |
+        sam deploy --template-file packaged.yaml \
+              --stack-name $STACK_NAME \
+              --capabilities CAPABILITY_IAM \
+              --region $AWS_REGION \
+              --no-fail-on-empty-changeset \
+              --no-confirm-changeset
+artifacts:
+  files:
+    - packaged.yaml
