@@ -1,0 +1,6 @@
+codestar_connection_arn = "arn:aws:codeconnections:ap-south-1:140857882741:connection/99b1259f-057e-497b-9187-725263d80ffc"
+github_owner            = "ThirumaranM"
+github_repo             = "terraform"
+github_branch           = "main"
+project_name            = "terraform"
+environment             = "learning"
